@@ -1,0 +1,18 @@
+model:
+  best_model: RandomForestClassifier
+  name: energy_load_classifier
+  accuracy: 0.95
+  precision: 0.93
+  recall: 0.83
+  f1_score: 0.88
+  parameters:
+    bootstrap: true
+    criterion: log_loss
+    max_depth: 40
+    min_samples_leaf: 8
+    min_samples_split: 5
+    n_estimators: 200
+  target_variable: energy_load_category
+  features: "\n  - Relative Compactness\n  - Surface Area\n  - Wall Area\n  - Roof\
+    \ Area\n  - Overall Height\n  - Orientation\n  - Glazing Area\n  - Glazing Area\
+    \ Distribution"

@@ -1,0 +1,7 @@
+services:
+  mlflow_energy_load:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: mlflow_energy_load   # 👈 Explicitly sets container name
+    ports:
+      - "5555:5000"
+    command: mlflow server --host 0.0.0.0

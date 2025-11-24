@@ -1,0 +1,21 @@
+services:
+  fastapi:
+    image: mrezvandehy/fastapi_with_docker
+    container_name: fastapi_energy_load   # 👈 Explicitly sets container name
+    build:
+      context: "." 
+      dockerfile: "Dockerfile"
+    #command: tail -f /dev/null
+    ports:
+      - "8000:8000"  # 👈 expose fastapi to a particular port
+
+  streamlit:
+    image: mrezvandehy/streamlit_with_docker
+    container_name: streamlit_energy_load   # 👈 Explicitly sets container name
+    build:
+      context: "." 
+      dockerfile: "./streamlit/Dockerfile"
+    ports:
+      - "8501:8501"  # 👈 expose streamlit to a particular port ("5555:5000" is already being used by mlflow). Streamlit always runs on port 8501 inside the container,
+    environment:
+      KEY: value
