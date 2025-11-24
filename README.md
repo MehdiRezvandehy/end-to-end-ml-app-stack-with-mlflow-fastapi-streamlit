@@ -1,5 +1,6 @@
 # Build and Deploy ML App in Dev with Docker Compose
 As an MLOps or AI/ML engineer on the AI Platform Engineering team, the mission is to **simulate a real-world machine learning application** in a development environment by automating its deployment using **Docker Compose**. This setup offers a fast and reliable way to build a **local development environment** and **streamline onboarding** for new data scientists and ML engineers.
+<img width="695" height="474" alt="image" src="https://github.com/user-attachments/assets/51f12d24-3506-4822-9050-13acef5bcbd0" />
 
 Create a local dev/test environment that includes:
 
