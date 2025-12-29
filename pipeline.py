@@ -26,7 +26,7 @@ subprocess.run([
 ])
 print('\n')
 print('# ----------------------------------------------------------------------------------------------')
-print('#                                3. Run mlflow Docker Compose                                   ')
+print('#                                3. Run MLflow Docker Compose                                   ')
 print('# ----------------------------------------------------------------------------------------------')
 print("Starting docker compose services...")
 subprocess.run([
