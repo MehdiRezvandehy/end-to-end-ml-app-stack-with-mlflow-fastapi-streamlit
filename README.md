@@ -1,11 +1,11 @@
-# End-to-End ML Application Stack with Docker Compose
+# End-to-End ML Application Stack with MLflow, FastAPI and Streamlit
 
-This project demonstrates a **complete machine learning application stack** running in a local development environment using **Docker Compose**.
+This project demonstrates a **complete machine learning application stack** running in a local development environment using **Docker Compose** and **Kubernetes**.
 
 The objective is to simulate a **real-world ML system** where model training, experiment tracking, model serving, and user interaction are integrated into a **single reproducible workflow**.
 
-<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-docker-compose/main/assets/deployment_schematic.gif" width="600" height="600">
-<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-docker-compose/main/assets/fig1-3.png" width="500" height="500">
+<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-mlflow-fastapi-streamlit/main/assets/deployment_schematic.gif" width="600" height="600">
+<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-mlflow-fastapi-streamlit/main/assets/fig1-3.png" width="500" height="500">
 
 This project creates a **local development and testing environment** that includes:
 
@@ -23,6 +23,14 @@ Using **Docker Compose** for local development and testing enables teams to:
 * **Develop workflows similar to those used in real AI/ML platform engineering teams**
 
 Docker Compose orchestrates these services and runs them together as a unified application.
+
+Finally, **simulate production-like orchestration locally using Kubernetes**:
+
+* Run Kubernetes locally with Minikube/Kind/k3d
+* Build Docker images before deploying to cluster
+* Load images into Minikube or push to registry
+* Use kubectl to deploy and manage resources
+* Verify pods/services and access apps via Minikube
 
 ---
 
