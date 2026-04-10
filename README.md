@@ -120,31 +120,70 @@ The system components communicate as follows:
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```
 project-root
-│
-├── pipeline.py        # ML training pipeline
-├── fastapi/       # FastAPI model serving
-├── streamlit/     # Streamlit frontend
-├── docker-compose.yml # Multi-container orchestration
-├── Dockerfile         # Container build instructions
+│ 
+├── pipeline.py          # ML training pipeline
+├── fastapi/             # FastAPI model serving
+├── streamlit/           # Streamlit frontend
+├── docker-compose.yml   # Multi-container orchestration
+├── Dockerfile           # Container build instructions
+├── k8s/                 # Kubernetes manifests
 └── README.md
 ```
 
 ---
 
-# Purpose of This Project
+## ☸️ Run with Kubernetes (Minikube)
 
-This project demonstrates how to build a **reproducible ML application stack** using containerized services.
+This project also supports **Kubernetes deployment**, simulating production environments.
 
-It illustrates how to integrate:
+### 1. Start Minikube
 
-* model training
-* experiment tracking
-* model serving
-* interactive user interfaces
+```bash
+minikube start
+```
 
-within a **single Docker-based development environment**.
+### 2. Apply Kubernetes manifests
+
+```bash
+kubectl apply -f k8s/
+```
+
+### 3. Check resources
+
+```bash
+kubectl get pods
+kubectl get services
+```
+
+### 4. Access services
+
+```bash
+minikube service <service-name>
+```
+
+---
+
+### ✅ Why Kubernetes?
+
+Using Kubernetes allows you to:
+
+* **Deploy ML systems in a production-like environment**
+* **Enable scaling and load balancing**
+* **Improve fault tolerance and reliability**
+* **Standardize deployment across cloud platforms**
+
+---
+
+
+## 🎯 Key Takeaways
+
+* ML systems are more than models — they require **infrastructure and orchestration**
+* APIs (FastAPI) make models **production-ready**
+* MLflow ensures **reproducibility and versioning**
+* Kubernetes brings **scalability and reliability**
+
 
