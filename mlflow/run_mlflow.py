@@ -47,7 +47,7 @@ def main(args):
 
     if args.mlflow_tracking_uri:
         logger.info(f"Load mlflow_tracking_uri: {args.mlflow_tracking_uri}")
-        mlflow.set_tracking_uri("args.mlflow_tracking_uri")
+        mlflow.set_tracking_uri(args.mlflow_tracking_uri)
         mlflow.set_experiment(model_cfg['name'])
 
     # Start MLflow run
