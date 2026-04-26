@@ -4,7 +4,7 @@ This project demonstrates a **complete machine learning application stack** runn
 
 The objective is to simulate a **real-world ML system** where model training, experiment tracking, model serving, and user interaction are integrated into a **single reproducible workflow**.
 
-<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-mlflow-fastapi-streamlit/main/assets/deployment_schematic.gif" width="600" height="600">
+<img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-mlflow-fastapi-streamlit/main/assets/deployment_schematic.gif" width="600" height="400">
 
 <img src="https://raw.githubusercontent.com/mehdirezvandehy/end-to-end-ml-app-stack-with-mlflow-fastapi-streamlit/main/assets/fig1-3.png"
      width="500" height="500"
