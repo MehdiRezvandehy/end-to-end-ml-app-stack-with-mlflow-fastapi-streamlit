@@ -16,17 +16,7 @@ subprocess.run([
 ])
 print('\n')
 print('# ----------------------------------------------------------------------------------------------')
-print('#                                 2. Run MLflow                                                 ')
-print('# ----------------------------------------------------------------------------------------------')
-subprocess.run([
-    python_executable, "mlflow/run_mlflow.py",
-    "--config", "./model/configs/model_config.yaml",
-    "--models-dir", "./model/pickles",
-    "--mlflow-tracking-uri", "http://localhost:5555"
-])
-print('\n')
-print('# ----------------------------------------------------------------------------------------------')
-print('#                                3. Run MLflow Docker Compose                                   ')
+print('#                                2. Run MLflow Docker Compose                                   ')
 print('# ----------------------------------------------------------------------------------------------')
 print("Starting docker compose services...")
 subprocess.run([
@@ -38,7 +28,16 @@ import time
 print("Waiting for MLflow to initialize...")
 time.sleep(2)
 print('\n')
-
+print('# ----------------------------------------------------------------------------------------------')
+print('#                                 3. Run MLflow                                                 ')
+print('# ----------------------------------------------------------------------------------------------')
+subprocess.run([
+    python_executable, "mlflow/run_mlflow.py",
+    "--config", "./model/configs/model_config.yaml",
+    "--models-dir", "./model/pickles",
+    "--mlflow-tracking-uri", "http://localhost:5555"
+])
+print('\n')
 print('# ----------------------------------------------------------------------------------------------')
 print('#                              4. Run Docker Compose for FastAPI & Streamlit')
 print('# ----------------------------------------------------------------------------------------------')
